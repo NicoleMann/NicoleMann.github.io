@@ -109,7 +109,20 @@
                 <div role="tabpanel" class="tab-pane" id="quest5">
                     <div class="row">
                         <div class="col-md-12">
-                            <pre>//Bean Counting II</pre>
+                            <pre>var text = prompt("Enter a phrase.");
+                    var char = prompt("Pick a letter.")
+                    var countChar = [];
+                    for(var i = 0; i < text.length; i++){
+                        if(text[i] === char){
+                            countChar.push(char);
+                        }
+                    }
+                    if(countChar.length === 0){
+                        console.log("Your letter wasn't found.");
+                    }
+                    else{
+                        console.log(countChar.length);
+                    }</pre>
                         </div>
                         <div class="col-md-12">
                             <button id="q5button" type="button" class="btn btn-danger">Execute Code</button>
