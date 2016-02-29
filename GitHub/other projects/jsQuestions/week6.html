@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Week 6 - JS Questions</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    </head>
+    
+    <body>
+        <div class="container">
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active"><a href="#quest6" aria-controls="home" role="tab" data-toggle="tab">Q6</a></li>
+                <li role="presentation"><a href="#quest7" aria-controls="profile" role="tab" data-toggle="tab">Q7</a></li>
+                <li role="presentation"><a href="#quest8" aria-controls="messages" role="tab" data-toggle="tab">Q8</a></li>
+                <li role="presentation"><a href="#quest9" aria-controls="settings" role="tab" data-toggle="tab">Q9</a></li>
+            </ul>
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="quest6">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <pre>$("#q6button").on("click", function(){
+                    function range(start,end){
+                        var arr = [];
+                        for(start; start <= end; start++){
+                            arr.push(start);
+                        }
+                        return arr;
+                    };
+                    var rangeResult = range(2,6);
+                    $("#q6result").html(rangeResult.join());
+                });</pre>
+                        </div>
+                        <div class="col-md-12">
+                            <button id="q6button" type="button" class="btn btn-danger">Execute Code</button>
+                        </div>
+                        <div class="col-md-12">
+                            <div id="q6result"></div>
+                        </div>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="quest7">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <pre>$("#q7button").on("click", function(){
+                    var arr = [1,2,3,4,5,6];
+                    var total = 0;
+                    for(var i in arr){
+                        total += arr[i];
+                    }                    
+                    $("#q7result").html(total);
+                });</pre>
+                        </div>
+                        <div class="col-md-12">
+                            <button id="q7button" type="button" class="btn btn-danger">Execute Code</button>
+                        </div>
+                        <div class="col-md-12">
+                            <div id="q7result"></div>
+                        </div>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="quest8">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <pre>$("#q8button").on("click",function(){
+                    function range(end,start){
+                        var arr = [];
+                        for(end; end >= start; end--){
+                            arr.push(end);
+                        }
+                        return arr;
+                    };
+                    var reverseArray = range(6,2);
+                    $("#q8result").html(reverseArray.join());
+                });</pre>
+                        </div>
+                        <div class="col-md-12">
+                            <button id="q8button" type="button" class="btn btn-danger">Execute Code</button>
+                        </div>
+                        <div class="col-md-12">
+                            <div id="q8result"></div>
+                        </div>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="quest9">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <pre>$("#q9button").on("click",function(){
+                    function range(end,start){
+                        var arr = [];
+                        for(end; end >= start; end--){
+                            arr.push(end);
+                        }
+                        return arr;
+                    };
+                    var reverseArrayInPlace = range(6,2);
+                    $("#q9result").html(reverseArrayInPlace);
+                });</pre>
+                        </div>
+                        <div class="col-md-12">
+                            <button id="q9button" type="button" class="btn btn-danger">Execute Code</button>
+                        </div>
+                        <div class="col-md-12">
+                            <div id="q9result"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            $(document).ready(function(){ 
+                $("#q6button").on("click", function(){
+                    function range(start,end){
+                        var arr = [];
+                        for(start; start <= end; start++){
+                            arr.push(start);
+                        }
+                        return arr;
+                    };
+                    var rangeResult = range(2,6);
+                    $("#q6result").html(rangeResult.join());
+                });
+                
+                $("#q7button").on("click", function(){
+                    var arr = [1,2,3,4,5,6];
+                    var total = 0;
+                    for(var i in arr){
+                        total += arr[i];
+                    }                    
+                    $("#q7result").html(total);
+                });
+                
+                $("#q8button").on("click",function(){
+                    function range(end,start){
+                        var arr = [];
+                        for(end; end >= start; end--){
+                            arr.push(end);
+                        }
+                        return arr;
+                    };
+                    var reverseArray = range(6,2);
+                    $("#q8result").html(reverseArray.join());
+                });
+                
+                $("#q9button").on("click",function(){
+                    function range(end,start){
+                        var arr = [];
+                        for(end; end >= start; end--){
+                            arr.push(end);
+                        }
+                        return arr;
+                    };
+                    var reverseArrayInPlace = range(6,2);
+                    $("#q9result").html(reverseArrayInPlace);
+                });
+            });
+        </script>
+    </body>
+</html>

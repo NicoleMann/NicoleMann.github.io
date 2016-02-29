@@ -150,21 +150,22 @@
                 });
                 
                 $("#q2button").on("click", function(){
+                    var foobar = "";  
                     for(var i = 1; i <= 100; i++){
-                        if(i%3 == 0){
-                            console.log("Foo");
+                        if(i % 3 === 0){
+                            foobar += "Foo <br>";
                         }
-                        else if(i%5 == 0){
-                            console.log("Bar");
+                        else if(i % 5 === 0){
+                            foobar += "Bar <br>";
                         }
-                        else if(i%3 == 0 && i%5 == 0){
-                            console.log("FooBar"); 
+                        else if(i % 3 === 0 && i % 5 === 0){
+                            foobar += "FooBar <br>"; 
                         }
                         else{
-                            console.log(i);
+                            foobar += i + "<br>";
                         }
                     }
-                $("#q2result").html(i = "Check the Console for the Answer");
+                $("#q2result").html(foobar);
                 });
                 
                 $("#q3button").on("click", function(){
