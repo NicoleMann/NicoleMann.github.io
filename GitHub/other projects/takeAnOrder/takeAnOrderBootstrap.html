@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Take An Order - Bootstrap</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="js/takeAnOrder.js"></script>
+    </head>
+    
+    <body>
+        <h1>Welcome!  Please indicate which comic (title and volume) that you would like to purchase!</h1>
+        <input id="mySingleLineText" type="text" value="Comic Title"><br>
+        <textarea id="myTextArea" name="textarea" rows="10" cols="50">List the volumes you would like to purchase</textarea></br><br>
+        <input type="radio" name="delivery" value="pickup" checked>Pick Up</br><br>
+        <input type="radio" name="delivery" value="deliver">Deliver</br><br>
+        <input type="radio" name="delivery" value="other">Other</br><br>
+        <input type="checkbox" name="rewardCard" value="Points" checked>PointsCard</br><br>
+        <input type="checkbox" name="rewardCard" value="Prize">PrizeCard</br><br>
+        <select id="mySelect">
+            <option value="Visa">Visa</option>
+            <option value="MasterCard">MasterCard</option>
+            <option value="Interac" selected>Interac</option>
+        </select></br><br>
+        <div id="mySelectMessage"></div></br><br>
+        <button id="myButton" type="button">Purchase!</button></br>
+        <div id="log">
+            <h3>Actions Taken</h3>
+        </div>
+    </body>
+</html>
