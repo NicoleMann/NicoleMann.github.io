@@ -1,4 +1,59 @@
 $(document).ready(function(){
+    
+    //overlay div to fade out screen
+	var overlay = $( '<div id="overlay"></div>' );
+	$( 'body' ).append( overlay );
+	overlay.hide();
+	overlay.click(function(){
+		overlay.animate({
+			opacity:0
+		},{
+			duration: 666,
+			queue:false,
+			complete:function(){
+				overlay.hide();
+			}
+		});
+        $( 'article.open' ).removeClass( 'open' );
+    });
+    
+    //activate title when mouse hovers
+	$( '.cover h3' ).hide();
+	$( '.cover img' ).hover(function(){
+		$( this ).prev().show();
+		$( this ).prev().css( 'top',-200 );
+		$( this ).prev().animate({
+			top: 0,
+			opacity:1
+		},{
+			queue:false,
+			duration:500
+		});
+	},function(){
+		$( this ).prev().animate({
+			top:450,
+			opacity:0
+		},{
+			queue:false,
+			duration:300,
+			complete:function(){
+				$( this ).hide();
+			}
+		});
+	});
+    
+    //activate overlay
+	$( '.cover img' ).click(function(){
+		$( this ).parent().parent().addClass( 'open' );
+		overlay.show();
+		overlay.animate({
+			opacity:1
+		},{
+			duration: 333,
+			queue:false
+		});
+	});
+    
     $("#mySingleLineText").focus(function(){
         $(this).css("background-color","yellow");
         $("#log").append("<br>User focused on the input.");
@@ -13,9 +68,9 @@ $(document).ready(function(){
     
     $("#myButton").mouseenter(function(){
         $(this).text("Are you finished your order?");
+        $("#log").append("<br>User moused over the button.");
     }).mouseleave(function(){
         $(this).text("Purchase!");
-        $("#log").append("<br>User moused over the button.");
     });
     
     $("#mySelect").change(function(){
