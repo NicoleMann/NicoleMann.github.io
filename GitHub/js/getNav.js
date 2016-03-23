@@ -4,3 +4,9 @@ $.get("http://NicoleMann.github.io/GitHub/partials/nav.html",function(data){
         $(".container").fadeIn();
     });
 });
+$.get("http://NicoleMann.github.io/GitHub/partials/footer.html",function(data){
+    $(document).ready(function(){
+        $(".container").append(data);
+        $(".container").fadeIn();
+    });
+});
