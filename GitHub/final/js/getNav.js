@@ -1,0 +1,12 @@
+$.get("http://NicoleMann.github.io/GitHub/final/partials/nav.html",function(data){
+    $(document).ready(function(){
+        $(".container").prepend(data);
+        $(".container").fadeIn();
+    });
+});
+$.get("http://NicoleMann.github.io/GitHub/final/partials/footer.html",function(data){
+    $(document).ready(function(){
+        $(".container").append(data);
+        $(".container").fadeIn();
+    });
+});

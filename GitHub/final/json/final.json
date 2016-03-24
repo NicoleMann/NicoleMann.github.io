@@ -1,0 +1,35 @@
+[{
+    "title": "Manga1",
+    "author": "Name1",
+    "image": "../images/image1.jpg",
+    "reviews": [{
+        "user": "User1",
+        "stars": 5,
+        "comment": "Awesome!"
+    },{
+        "user": "User2",
+        "stars": 4,
+        "comment": "Great"
+    },{
+        "user": "User3",
+        "stars": 5,
+        "comment": "Wonderful"
+    }]
+},{
+    "title": "Manga2",
+    "author": "Name2",
+    "image": "../images/image2.jpg",
+    "reviews": [{
+        "user": "User4",
+        "stars": 5,
+        "comment": "Awesome!"
+    },{
+        "user": "User5",
+        "stars": 4,
+        "comment": "Great"
+    },{
+        "user": "User6",
+        "stars": 5,
+        "comment": "Wonderful"
+    }]
+}]
