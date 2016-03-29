@@ -40,4 +40,16 @@ $(document).ready(function(){
         $("#log").append("<br>Value of radio is " + myRadio);
         $("#log").append("<br>Value of checkboxes is " + myChecked.join());
     });
+    
+    $("#getClients").click(function(){
+        var url = "http://NicoleMann.github.io/GitHub/other projects/ajaxExamples/jsonDatabase/clients.json";
+        $.getJSON(url, function(data){
+            var html = "<table>" + "<tr><th>Name</th><th>Email</th><th>Company</th></tr>";
+            $.each(data, function(index, item){
+                html += "<tr>" + "<td>" + item.name + "</td>" + "<td>" + item.email + "</td>" + "<td>" + item.company + "</td>" + "</tr>";
+            })
+            html += "</table>";
+            $("#data").append(html);
+        })
+    })
 });
