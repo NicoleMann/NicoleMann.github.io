@@ -2,20 +2,39 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Bootstrap 3 Responsive Template</title>
+        <title>Place an order</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="http://NicoleMann.github.io/GitHub/final/css/stlye.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="http://NicoleMann.github.io/GitHub/final/js/final.js"></script>
     </head>
     
     <body>
         <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    Lorem Ipsum
-                </div>
+            <input id="mySingleLineText" type="text" value="Comic Title"><br>
+            <textarea id="myTextArea" name="textarea" rows="10" cols="50">List the volumes you would like to purchase</textarea></br><br>
+            <div>
+                <p>How would you like to recieve your comics?</p>
+                <input type="radio" name="delivery" value="pickup" checked>Pick Up</br><br>
+                <input type="radio" name="delivery" value="deliver">Deliver
             </div>
+            <div>
+                <p>Do you have rewards card with us?</p>
+                <input type="checkbox" name="rewardCard" value="Points" checked>PointsCard</br><br>
+                <input type="checkbox" name="rewardCard" value="Prize">PrizeCard
+            </div>
+            <div>
+                <p>How would you like to pay?</p>
+                <select id="mySelect">
+                    <option value="Visa">Visa</option>
+                    <option value="MasterCard">MasterCard</option>
+                    <option value="Interac" selected>Interac</option>
+                </select>
+            </div>
+            <div id="mySelectMessage"></div>
+            <button id="myButton" type="button">Purchase!</button>
         </div>
         <script src="http://NicoleMann.github.io/GitHub/final/js/getNav.js"></script>
     </body>

@@ -21,3 +21,25 @@ body{
     background-color: #f5f5f5;
     height: 100%;
 }
+
+.carousel{
+     background: #2f4357;
+     margin-top: 20px;
+}
+
+.carousel .item img{
+     margin: 0 auto;
+     /* Align slide image horizontally center */
+}
+
+.bs-example{
+     margin: 20px;
+}
+
+.carousel h3{
+    color:red;
+}
+
+.carousel p{
+    color:red;
+}
