@@ -5,9 +5,9 @@ $(document).ready(function(){
     });
     
     $("#myTextArea").focus(function(){
-        $(this).css("background-color","blue");
+        $(this).css("border-color","blue");
     }).blur(function(){
-        $(this).css("background-color","red");
+        $(this).css("border-color","red");
         $("#log").append("<br>User blurred the text area.");
     });
     
