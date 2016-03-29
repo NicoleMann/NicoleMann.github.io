@@ -1,7 +1,7 @@
 [{
-    "title": "Manga1",
+    "title": "Big Windup",
     "author": "Name1",
-    "image": "../images/image1.jpg",
+    "image": "../images/bigwindup.jpg",
     "reviews": [{
         "user": "User1",
         "stars": 5,
@@ -16,9 +16,9 @@
         "comment": "Wonderful"
     }]
 },{
-    "title": "Manga2",
+    "title": "D.Gray-Man",
     "author": "Name2",
-    "image": "../images/image2.jpg",
+    "image": "../images/exorcists.jpg",
     "reviews": [{
         "user": "User4",
         "stars": 5,
@@ -29,6 +29,40 @@
         "comment": "Great"
     },{
         "user": "User6",
+        "stars": 5,
+        "comment": "Wonderful"
+    }]
+},{
+    "title": "Magi",
+    "author": "Name1",
+    "image": "../images/magi.jpg",
+    "reviews": [{
+        "user": "User1",
+        "stars": 5,
+        "comment": "Awesome!"
+    },{
+        "user": "User2",
+        "stars": 4,
+        "comment": "Great"
+    },{
+        "user": "User3",
+        "stars": 5,
+        "comment": "Wonderful"
+    }]
+},{
+    "title": "Assassination Classroom",
+    "author": "Name1",
+    "image": "../images/Assassination.jpg",
+    "reviews": [{
+        "user": "User1",
+        "stars": 5,
+        "comment": "Awesome!"
+    },{
+        "user": "User2",
+        "stars": 4,
+        "comment": "Great"
+    },{
+        "user": "User3",
         "stars": 5,
         "comment": "Wonderful"
     }]
