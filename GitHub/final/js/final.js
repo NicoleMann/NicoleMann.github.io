@@ -1,5 +1,5 @@
 $(document).ready(function(){
-        $("#mySingleLineText").focus(function(){
+    $("#mySingleLineText").focus(function(){
         $(this).css("background-color","yellow");
         $("#log").append("<br>User focused on the input.");
     });
@@ -47,9 +47,9 @@ $(document).ready(function(){
         $.getJSON(url, function(data){
             var html = "<table>" + "<tr><th>Title</th><th>Author</th><th>Reviews</th></tr>";
             $.each(data, function(index, item){
-                html += "<tr>" + "<td>" + item.title + "</td>" + "<td>" + item.author + "</td>";
+                html += "<tr>" + "<td>" + item.title + "</td>" + "<td>" + item.author + "</td>" + "<td>";
                 $.each(item.reviews, function(ind, i){
-                    html += "<t+d>" + "<div>" + i.username + "</div>" + "<div>" + i.comment + "</div>" + "<div>";
+                    html += "<div>" + i.username + "</div>" + "<div>" + i.comment + "</div>" + "<div>";
                     for(var j=1; j<=5: j++){
                         if(j<=i.stars){
                             html += "<img src='http://NicoleMann.github.io/Github/final/images/fullStar.png'/>";
