@@ -51,9 +51,9 @@ $(document).ready(function(){
                 html += "<div class='panel-body'>" + "<div>" + i.username + "</div>" + "<div>" + i.comment + "</div>" + "<div>";
                 for(var j=1; j<=5; j++){
                     if(j<=i.stars){
-                        html += "<img src='http://NicoleMann.github.io/Github/final/images/fullStar.png'/>";
+                        html += "<img src='http://NicoleMann.github.io/GitHub/final/images/fullStar.png'/>";
                     }else{
-                        html += "<img src='http://NicoleMann.github.io/Github/final/images/emptyStar.png'/>";
+                        html += "<img src='http://NicoleMann.github.io/GitHub/final/images/emptyStar.png'/>";
                     }
                 }
                 html += "</div>" + "</div>";
