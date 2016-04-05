@@ -3,15 +3,15 @@
     "author": "Name1",
     "image": "http://NicoleMann.github.io/GitHub/final/images/bigwindup.jpg",
     "reviews": [{
-        "user": "User1",
+        "user": "BestCleanUpHitterEva654",
         "stars": 5,
         "comment": "Awesome!"
     },{
-        "user": "User2",
+        "user": "AbeTakaya",
         "stars": 4,
         "comment": "Great"
     },{
-        "user": "User3",
+        "user": "SlowPitch",
         "stars": 5,
         "comment": "Wonderful"
     }]
@@ -20,17 +20,17 @@
     "author": "Name2",
     "image": "http://NicoleMann.github.io/GitHub/final/images/exorcists.jpg",
     "reviews": [{
-        "user": "User4",
+        "user": "FutureBookMan",
         "stars": 5,
-        "comment": "Awesome!"
+        "comment": "So cool!"
     },{
-        "user": "User5",
+        "user": "Mugen",
+        "stars": 3,
+        "comment": "Not bad"
+    },{
+        "user": "MasterPleasePayYourOwnDebts",
         "stars": 4,
-        "comment": "Great"
-    },{
-        "user": "User6",
-        "stars": 5,
-        "comment": "Wonderful"
+        "comment": "Wonderful story"
     }]
 },{
     "title": "Magi",
@@ -39,7 +39,7 @@
     "reviews": [{
         "user": "User1",
         "stars": 5,
-        "comment": "Awesome!"
+        "comment": "So much fun!"
     },{
         "user": "User2",
         "stars": 4,
