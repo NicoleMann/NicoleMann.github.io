@@ -41,27 +41,24 @@ $(document).ready(function(){
         $("#log").append("<br>Value of checkboxes is " + myChecked.join());
     });
     
-    //review button for json
-    $("#review").click(function(){
-        var url = "http://NicoleMann.github.io/GitHub/final/json/final.json";
-        $.getJSON(url, function(data){
-            var html = "";
-            $.each(data, function(index, item){
-                html += "<div class='col-md-4'>" + "<div>" + item.title + "</div>" + "<div>" + item.author + "</div>" + "<div src'" + item.image + "'/>" + "<div class='panel panel-default'>" + "<div class='panel-heading'>Reviews</div>";
-                $.each(item.reviews, function(ind, i){
-                    html += "<div class='panel-body'>" + "<div>" + i.username + "</div>" + "<div>" + i.comment + "</div>" + "<div>";
-                    for(var j=1; j<=5: j++){
-                        if(j<=i.stars){
-                            html += "<img src='http://NicoleMann.github.io/Github/final/images/fullStar.png'/>";
-                        }else{
-                            html += "<img src='http://NicoleMann.github.io/Github/final/images/emptyStar.png'/>";
-                        }
+    //review comics for json
+    $.getJSON(url, function(data){
+        var html = "";
+        $.each(data, function(index, item){
+            html += "<div class='col-md-4'>" + "<div>" + item.title + "</div>" + "<div>" + item.author + "</div>" + "<div src'" + item.image + "'/>" + "<div class='panel panel-default'>" + "<div class='panel-heading'>Reviews</div>";
+            $.each(item.reviews, function(ind, i){
+                html += "<div class='panel-body'>" + "<div>" + i.username + "</div>" + "<div>" + i.comment + "</div>" + "<div>";
+                for(var j=1; j<=5: j++){
+                    if(j<=i.stars){
+                        html += "<img src='http://NicoleMann.github.io/Github/final/images/fullStar.png'/>";
+                    }else{
+                        html += "<img src='http://NicoleMann.github.io/Github/final/images/emptyStar.png'/>";
                     }
-                    html += "</div>" + "</div>";
-                })
+                }
                 html += "</div>" + "</div>";
             })
-            $("#data").append(html);
+            html += "</div>" + "</div>";
         })
+        $("#data").append(html);
     })
 });
