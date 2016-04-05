@@ -34,13 +34,8 @@ $(document).ready(function(){
         $("[name='rewardCard']:checked").each(function(){
             myChecked.push($(this).val());
         });
-        var confirm = alert("Thanks for your purchase!  Please confirm the following information and click OK.");
-        $(confirm).append("<br>User clicked the button");
-        $(confirm).append("<br>Value of input is " + myInput);
-        $(confirm).append("<br>Value of text area is " + myText);
-        $(confirm).append("<br>Value of select is " + mySelect);
-        $(confirm).append("<br>Value of radio is " + myRadio);
-        $(confirm).append("<br>Value of checkboxes is " + myChecked.join());
+        var confirm = alert("Thanks for your purchase!  Please confirm the following information and click OK. <br>Value of input is " + myInput + "<br>Value of text area is " + myText + "Value of drop select is " + mySelect + "Value of radio button is " + myRadio + "Value of selected checkboxes is " + myChecked.join());
+        $("#log").append("<br>User clicked the button");
     });
     
     //review comics for json
