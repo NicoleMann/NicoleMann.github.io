@@ -1,10 +1,4 @@
-$(document).ready(function(){
-    //nav highlights
-    $(".nav").find("li").click(function(){
-        $(".nav").find("li").removeClass("active");
-        $(this).addClass("active");
-    });
-    
+$(document).ready(function(){    
     //order page information
     $("#mySingleLineText").focus(function(){
         $(this).css("background-color","yellow");
@@ -40,12 +34,13 @@ $(document).ready(function(){
         $("[name='rewardCard']:checked").each(function(){
             myChecked.push($(this).val());
         });
-        $("#log").append("<br>User clicked the button");
-        $("#log").append("<br>Value of input is " + myInput);
-        $("#log").append("<br>Value of text area is " + myText);
-        $("#log").append("<br>Value of select is " + mySelect);
-        $("#log").append("<br>Value of radio is " + myRadio);
-        $("#log").append("<br>Value of checkboxes is " + myChecked.join());
+        var confirm = alert("Thanks for your purchase!  Please confirm the following information and click OK.");
+        $(confirm).append("<br>User clicked the button");
+        $(confirm).append("<br>Value of input is " + myInput);
+        $(confirm).append("<br>Value of text area is " + myText);
+        $(confirm).append("<br>Value of select is " + mySelect);
+        $(confirm).append("<br>Value of radio is " + myRadio);
+        $(confirm).append("<br>Value of checkboxes is " + myChecked.join());
     });
     
     //review comics for json
