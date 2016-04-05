@@ -1,7 +1,7 @@
 [{
     "title": "Big Windup",
     "author": "Name1",
-    "image": "../images/bigwindup.jpg",
+    "image": "http://NicoleMann.github.io/GitHub/final/images/bigwindup.jpg",
     "reviews": [{
         "user": "User1",
         "stars": 5,
@@ -18,7 +18,7 @@
 },{
     "title": "D.Gray-Man",
     "author": "Name2",
-    "image": "../images/exorcists.jpg",
+    "image": "http://NicoleMann.github.io/GitHub/final/images/exorcists.jpg",
     "reviews": [{
         "user": "User4",
         "stars": 5,
@@ -35,7 +35,7 @@
 },{
     "title": "Magi",
     "author": "Name1",
-    "image": "../images/magi.jpg",
+    "image": "http://NicoleMann.github.io/GitHub/final/images/magi.jpg",
     "reviews": [{
         "user": "User1",
         "stars": 5,
@@ -52,7 +52,7 @@
 },{
     "title": "Assassination Classroom",
     "author": "Name1",
-    "image": "../images/Assassination.jpg",
+    "image": "http://NicoleMann.github.io/GitHub/final/images/Assassination.jpg",
     "reviews": [{
         "user": "User1",
         "stars": 5,
@@ -67,9 +67,9 @@
         "comment": "Wonderful"
     }]
 },{
-    "title": "Big Windup",
+    "title": "Hitogatana",
     "author": "Name1",
-    "image": "../images/bigwindup.jpg",
+    "image": "http://NicoleMann.github.io/GitHub/final/images/bigwindup.jpg",
     "reviews": [{
         "user": "User1",
         "stars": 5,
@@ -84,9 +84,9 @@
         "comment": "Wonderful"
     }]
 },{
-    "title": "Big Windup",
+    "title": "Seven Deadly Sins",
     "author": "Name1",
-    "image": "../images/bigwindup.jpg",
+    "image": "http://NicoleMann.github.io/GitHub/final/images/bigwindup.jpg",
     "reviews": [{
         "user": "User1",
         "stars": 5,
