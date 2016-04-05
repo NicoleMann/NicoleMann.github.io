@@ -55,7 +55,7 @@ $(document).ready(function(){
         $.each(data, function(index, item){
             html += "<div class='col-lg-4 col-xs-12'>" + "<div>" + item.title + "</div>" + "<div>" + item.author + "</div>" + "<div src'" + item.image + "'/>" + "<div class='panel panel-default'>" + "<div class='panel-heading'>Reviews</div>";
             $.each(item.reviews, function(ind, i){
-                html += "<div class='panel-body'>" + "<div>" + i.username + "</div>" + "<div>" + i.comment + "</div>" + "<div>";
+                html += "<div class='panel-body'>" + "<div>" + i.user + "</div>" + "<div>" + i.comment + "</div>" + "<div>";
                 for(var j=1; j<=5; j++){
                     if(j<=i.stars){
                         html += "<img src='http://NicoleMann.github.io/GitHub/final/images/fullStar.png'/>";
