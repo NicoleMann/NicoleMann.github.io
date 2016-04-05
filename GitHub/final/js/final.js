@@ -1,4 +1,11 @@
 $(document).ready(function(){
+    //nav highlights
+    $(".nav").find("li").click(function(){
+        $(".nav").find("li").removeClass("active");
+        $(this).addClass("active");
+    });
+    
+    //order page information
     $("#mySingleLineText").focus(function(){
         $(this).css("background-color","yellow");
         $("#log").append("<br>User focused on the input.");
