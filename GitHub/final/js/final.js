@@ -42,6 +42,7 @@ $(document).ready(function(){
     });
     
     //review comics for json
+    var url = "http://NicoleMann.github.io/GitHub/final/json/final.json";
     $.getJSON(url, function(data){
         var html = "";
         $.each(data, function(index, item){
