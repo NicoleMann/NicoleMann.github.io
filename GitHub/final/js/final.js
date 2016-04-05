@@ -41,12 +41,25 @@ $(document).ready(function(){
         $("#log").append("<br>Value of checkboxes is " + myChecked.join());
     });
     
+    //review button for json
     $("#review").click(function(){
         var url = "http://NicoleMann.github.io/GitHub/final/json/final.json";
         $.getJSON(url, function(data){
-            var html = "<table>" + "<tr><th>Name</th><th>Email</th><th>Company</th></tr>";
+            var html = "<table>" + "<tr><th>Title</th><th>Author</th><th>Reviews</th></tr>";
             $.each(data, function(index, item){
-                html += "<tr>" + "<td>" + item.name + "</td>" + "<td>" + item.email + "</td>" + "<td>" + item.company + "</td>" + "</tr>";
+                html += "<tr>" + "<td>" + item.title + "</td>" + "<td>" + item.author + "</td>";
+                $.each(item.reviews, function(ind, i){
+                    html += "<t+d>" + "<div>" + i.username + "</div>" + "<div>" + i.comment + "</div>" + "<div>";
+                    for(var j=1; j<=5: j++){
+                        if(j<=i.stars){
+                            html += "<img src='http://NicoleMann.github.io/Github/final/images/fullStar.png'/>";
+                        }else{
+                            html += "<img src='http://NicoleMann.github.io/Github/final/images/emptyStar.png'/>"
+                        }
+                    }
+                    html += "</div>" + "</td>"
+                })
+                html += "</tr>"
             })
             html += "</table>";
             $("#data").append(html);
