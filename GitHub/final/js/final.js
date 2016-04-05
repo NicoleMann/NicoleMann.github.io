@@ -34,7 +34,7 @@ $(document).ready(function(){
         $("[name='rewardCard']:checked").each(function(){
             myChecked.push($(this).val());
         });
-        var confirm = alert("Thanks for your purchase!  Please confirm the following information and click OK. <br>Value of input is " + myInput + "<br>Value of text area is " + myText + "Value of drop select is " + mySelect + "Value of radio button is " + myRadio + "Value of selected checkboxes is " + myChecked.join());
+        var confirm = alert("Thanks for your purchase!  Please confirm the following information and click OK. <br>Value of input is " + myInput + "<br>Value of text area is " + myText + "<br>Value of drop select is " + mySelect + "<br>Value of radio button is " + myRadio + "<br>Value of selected checkboxes is " + myChecked.join());
         $("#log").append("<br>User clicked the button");
     });
     
