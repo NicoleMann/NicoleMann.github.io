@@ -9,7 +9,7 @@ neutral colour = grey
 highlight = hot pink*/
 
 body {
-    background-image: url(background.jpg);
+    background-image: url(../img/background.jpg);
     font-family: "Roboto", sans-serif;
     font-size: 18px;
     font-weight: 300;
@@ -58,14 +58,15 @@ body {
 }
 
 #main-page h2 {
-    color: #53D6FF;
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 150%;
+    display:none;
 }
 
 .hobby {
-    display: none;
+    width: 300px;
+    float: left;
+    height: 400px;
+    margin-right: 20px;
+    margin-bottom: 20px;
 }
 
 .hobby:nth-child(4n+1) {
