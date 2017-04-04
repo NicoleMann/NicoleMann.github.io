@@ -1,0 +1,154 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600);
+
+/* Minified Eric Meyer CSS Reset */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+/* CSS Reset Ends */
+
+/* colour scheme
+    highlight (pink): #E91E63
+    neutral (dark grey): #212121
+*/
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    line-height: 1.38888;
+    font-weight: 300;
+}
+
+#site-header {
+    background: #212121;
+}
+
+#site-header h1 a {
+    color: #E91E63;
+    text-decoration: none;
+    display: block;
+    width: 960px;
+    margin: 0 auto;
+    font-size: 60px;
+    line-height: 70px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+#movie-list {
+    width: 960px;
+    margin: 0 auto;
+    padding: 20px 10px 0 10px;
+}
+
+#movie-list h2 {
+    display: none;
+}
+
+.movie {
+    width: 300px;
+    float: left;
+    height: 450px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.movie:nth-child(3n + 1) {
+    margin-right: 0;
+}
+
+.basic-info {
+    position: relative;
+    overflow: hidden;
+    height: inherit;
+}
+
+.basic-info h3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba( 0, 0, 0, 0.75 );
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 150%;
+}
+
+.basic-info img {
+    max-width: 100%;
+    cursor: pointer;
+}
+
+.extended-info {
+   /* display: none; */
+    position: fixed;
+    z-index: 9000;
+    top: -1000px;
+    left: 50%;
+    background: white;
+    padding: 20px;
+
+    /* shifts and grows the box to the center */
+    -webkit-transform: translate(-50%,-50%) scale(0);
+    -ms-transform: translate(-50%,-50%) scale(0);
+    transform: translate(-50%,-50%) scale(0);
+    
+    -webkit-transition: all 0.666s ease;
+    transition: all 0.666s ease;
+}
+
+.open .extended-info {
+   /* display: block; */
+    top: 50%;
+    
+    -webkit-transform: translate(-50%,-50%) scale(1);
+    -ms-transform: translate(-50%,-50%) scale(1);
+    transform: translate(-50%,-50%) scale(1);
+}
+
+.extended-info h3 {
+    color: #E91E63;
+    text-transform: uppercase;
+    font-size: 125%;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.extended-info p {
+    margin-bottom: 25px;
+}
+
+.extended-info ul {
+    list-style: disc;
+    margin-left: 25px;
+}
+
+/* style links as buttons */
+.extended-info a {
+    display: block;
+    background: #E91E63;
+    color: white;
+    float: right;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 8px 20px;
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.66);
+}
+
+#youtube {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    border: solid 20px white;
+}
