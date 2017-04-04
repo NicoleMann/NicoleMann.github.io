@@ -1,0 +1,79 @@
+/* Eric Meyer CSS Reset */
+a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+/* CSS Reset Ends */
+
+body {
+	background-image: url(../images/background.jpg);
+	font:Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", serif;
+}
+
+h1 {
+	font-size:200%;
+	color:#FF0004;
+	padding-top:20px;
+	padding-bottom:20px;
+}
+
+h3 {
+	font-size:125%;
+	text-align:center;
+	color:#FF0004;
+	margin-bottom:15px;
+}
+
+ul {
+	text-align:center;
+}
+
+p,li {
+	line-height:1.3888;
+	font-size:18px;
+}
+
+p {
+	margin-bottom:10px;
+}
+
+#layout {
+	width: 800px;
+	background-color: #E3E3E3;
+	margin-top: 25px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+nav   {
+	width: 150px;
+	float: left;
+	padding-top:15px;
+	padding-left: 15px;
+	background-color: #E3E3E3;
+	color: #000000;
+	border-top:solid #FF0004;
+}
+
+header {
+	text-align: center;
+}
+
+#footer {
+	padding-left: 15px;
+	padding-right: 15px;
+	bottom: auto;
+	clear: both;
+	padding-top:15px;
+	padding-bottom:15px;
+	border-top:solid #000000;
+	margin-bottom:10px;
+}
+
+main {
+	width: 600px;
+	padding-top:15px;
+	padding-left: 15px;
+	padding-right: 15px;
+	float: right;
+	border-top:solid #FF0004;
+	border-left:solid #FF0004;
+	margin-bottom:50px;
+}
