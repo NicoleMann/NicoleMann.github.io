@@ -1,0 +1,12 @@
+$.get("partials/nav.html",function(data){
+    $(document).ready(function(){
+        $(".container").prepend(data);
+        $(".container").fadeIn();
+    });
+});
+$.get("partials/footer.html",function(data){
+    $(document).ready(function(){
+        $(".container").append(data);
+        $(".container").fadeIn();
+    });
+});

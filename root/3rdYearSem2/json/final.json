@@ -1,0 +1,103 @@
+[{
+    "title": "Big Windup",
+    "author": "Name1",
+    "image": "../images/bigwindup.jpg",
+    "reviews": [{
+        "user": "BestCleanUpHitterEva654",
+        "stars": 5,
+        "comment": "Awesome!"
+    },{
+        "user": "AbeTakaya",
+        "stars": 4,
+        "comment": "Great"
+    },{
+        "user": "SlowPitch",
+        "stars": 5,
+        "comment": "Wonderful"
+    }]
+},{
+    "title": "D.Gray-Man",
+    "author": "Name2",
+    "image": "../images/exorcists.jpg",
+    "reviews": [{
+        "user": "FutureBookMan",
+        "stars": 5,
+        "comment": "So cool!"
+    },{
+        "user": "Mugen",
+        "stars": 3,
+        "comment": "Not bad"
+    },{
+        "user": "MasterPleasePayYourOwnDebts",
+        "stars": 4,
+        "comment": "Wonderful story"
+    }]
+},{
+    "title": "Magi",
+    "author": "Name3",
+    "image": "images/magi.jpg",
+    "reviews": [{
+        "user": "PLeaseBeMyFriend",
+        "stars": 5,
+        "comment": "So much fun!"
+    },{
+        "user": "FromRagsToRiches",
+        "stars": 4,
+        "comment": "Great"
+    },{
+        "user": "BreakMyChains",
+        "stars": 5,
+        "comment": "Wonderful"
+    }]
+},{
+    "title": "Assassination Classroom",
+    "author": "Name4",
+    "image": "images/Assassination.jpg",
+    "reviews": [{
+        "user": "RedDevil",
+        "stars": 5,
+        "comment": "Awesome!"
+    },{
+        "user": "NotAGirl",
+        "stars": 4,
+        "comment": "Great"
+    },{
+        "user": "Tentacles",
+        "stars": 5,
+        "comment": "Wonderful"
+    }]
+},{
+    "title": "Hitogatana",
+    "author": "Name1",
+    "image": "images/bigwindup.jpg",
+    "reviews": [{
+        "user": "AntiTomatoes",
+        "stars": 5,
+        "comment": "Awesome!"
+    },{
+        "user": "Mechanic",
+        "stars": 4,
+        "comment": "Great"
+    },{
+        "user": "Togusa",
+        "stars": 5,
+        "comment": "Wonderful"
+    }]
+},{
+    "title": "Seven Deadly Sins",
+    "author": "Name1",
+    "image": "images/bigwindup.jpg",
+    "reviews": [{
+        "user": "Wrath",
+        "stars": 5,
+        "comment": "Awesome!"
+    },{
+        "user": "Greed",
+        "stars": 4,
+        "comment": "Great"
+    },{
+        "user": "Envy",
+        "stars": 5,
+        "comment": "Wonderful"
+    }]
+}]
