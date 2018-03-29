@@ -1,0 +1,400 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>The Mage and the Demon</title>
+		<script src="https://d309knd7es5f10.cloudfront.net/createjs.min.js"></script>
+		<script>
+			var zon = true; 
+			var zns = false;
+		</script>
+		<script src="https://d309knd7es5f10.cloudfront.net/zim_6.7.5.js"></script>
+		<script>
+
+			//set game area dimensions
+			var scaling = "fit"; 
+			var width = 1024;
+			var height = 768;
+			var frame = new Frame(scaling, width, height);
+			
+			//begin game code
+			frame.on("ready", function() {
+				zog("ready from ZIM Frame");
+				var stage = frame.stage;
+				var stageW = frame.width;
+				var stageH = frame.height;
+				frame.outerColor = "#444";
+				frame.color = "#ddd";
+				
+				//import assets and build buttons
+				frame.loadAssets(["witch.png","creature.png","forest.png","hostage.png","castle.png","door.png","indoors.png","wound.png","attackSpell.png","curse.png","defendSpell.png","victory.png"],"img/");
+				frame.on("complete", function(){
+					
+					var character = frame.asset("witch.png").centerReg();
+					
+					var nextPage = new Button({label:"Continue",
+											   color:frame.blue,
+											   rollColor:frame.red})
+									.addTo(stage)
+									.pos(stageW/1.25,stageH/1.1);
+					var nextPage2 = new Button({label:"Continue",
+											   color:frame.red,
+											   rollColor:frame.green});
+					var nextPage3 = new Button({label:"Continue",
+											   color:frame.green,
+											   rollColor:frame.purple});
+					var nextPage4 = new Button({label:"Continue",
+											   color:frame.purple,
+											   rollColor:frame.orange});
+					var nextPage5 = new Button({label:"Continue",
+											   color:frame.orange,
+											   rollColor:frame.yellow});
+					var nextPage6 = new Button({label:"Continue",
+											   color:frame.yellow,
+											   rollColor:frame.blue});
+					var setting = frame.asset("forest.png").centerReg();
+					var villain = frame.asset("creature.png").centerReg();
+					villain.addTo(stage).pos(stageW+500,stageH/3);
+					var hostage = frame.asset("hostage.png")
+									.centerReg()
+									.removeFrom(stage);
+					var lair = frame.asset("castle.png")
+									.centerReg()
+									.removeFrom(stage);
+					var door = frame.asset("door.png");
+					var indoors = frame.asset("indoors.png");
+					var attackSpell = frame.asset("attackSpell.png");
+					var defendSpell = frame.asset("defendSpell.png")
+					var curse = frame.asset("curse.png");
+					var wound = frame.asset("wound.png");
+					var victory = frame.asset("victory.png")
+					var replay = new Button({width:200,
+											 height:100,
+											 label:"Play Again!",
+											 color:frame.blue,
+											 rollColor:frame.orange});
+					
+					
+					pageOne();
+					
+					//meet the protag
+					function pageOne(){
+						zog("story start");
+						var greeting = new Label({text:"Click Me!",color:"white"});
+						var i = new Label({text:"Hi!  Welcome to my forest!",color:"gold"});
+						
+						setting.addTo(stage).pos(stageW/2,stageH/3)
+						character.center(stage);
+						greeting.addTo(stage).pos(stageW/2.8,stageH/2);
+						
+						character.on("click", function(){
+							greeting.removeFrom(stage);
+							i.addTo(stage).pos(stageW/2.1,stageH/5);
+						});
+												
+						nextPage.on("click", function(){
+							i.removeFrom(stage);
+							character.animate({
+								obj:{x:200},
+								time:500
+							})
+							pageTwo();
+						})
+						
+					};
+					
+					//meet the villain
+					function pageTwo(){
+						zog("page 2");
+						var n = new Label({text:"Oh no, a Demon!",color:"gold"});
+						
+						nextPage.removeFrom(stage);
+						nextPage2.addTo(stage).pos(stageW/1.25,stageH/1.1)
+						
+						villain.addTo(stage).pos(stageW+500,stageH/3);
+						villain.animate({
+							obj:{x:stageW-200},
+							time:500
+						});
+						
+						n.addTo(stage).pos(stageW/4.5,stageH/5);
+						
+						nextPage2.on("click", function(){
+							n.removeFrom(stage);
+							pageThree();
+						});
+					};
+					
+					//what the villain's doing
+					function pageThree(){
+						zog("page 3");
+						var help = new Label({text:"Help me!",color:frame.red});
+						
+						nextPage2.removeFrom(stage);
+						nextPage3.addTo(stage).pos(stageW/1.25,stageH/1.1)
+						
+						character.animate({
+							obj:{x:-400},
+							time:500
+						});
+						
+						villain.animate({
+							obj:{x:stageW/2,
+								 y:stageH/2,
+								 scale:2,
+								 alpha:0},
+							time:500
+						});
+						
+						hostage.center(stage).sca(2);
+						
+						help.addTo(stage).pos(stageW/1.8,stageH/3);
+						
+						nextPage3.on("click", function(){
+							villain.removeFrom(stage);
+							help.removeFrom(stage);
+							pageFour();
+						})
+					};
+					
+					//follow the villain
+					function pageFour(){
+						zog("page 4");
+						nextPage3.removeFrom(stage);
+                        var s = new Label({text:"Let's follow them!",color:"gold"});
+						
+						character.animate({
+								obj:{x:200},
+								time:500
+							});
+						
+						hostage.animate({
+							obj:{x:stageW+1000,y:-500,scale:-3},
+							time:500
+						});
+						
+                        s.addTo(stage).pos(stageW/4.5,stageH/5);
+                        
+						var sign = new Label({text:"Fairy Forest",backgroundColor:"tan"}).addTo(stage).pos(stageW/2,50)
+						var sign2 = new Label({text:"Dark Castle",backgroundColor:"tan"}).addTo(stage).pos(stageW-200,stageH/2)
+						
+						sign.on("click", function(){
+							var warning = new Label("Are you sure this is the right way?").addTo(stage).pos(stageW/3,100);
+							warning.animate({
+								obj:{alpha:0},
+								time:3000
+							})
+						})
+						
+						sign2.on("click", function(){
+							sign.removeFrom(stage);
+							sign2.removeFrom(stage);
+                            s.removeFrom(stage);
+							character.animate({
+								obj:{x:stageW+500},
+								time:500,
+							});
+							nextPage4.addTo(stage).pos(stageW/1.25,stageH/1.1)
+						})
+						
+						nextPage4.on("click", function(){
+							setting.removeFrom(stage);
+							hostage.removeFrom(stage);
+							pageFive();
+						})
+					}
+					
+					//arrive at lair, puzzle
+					function pageFive(){
+						zog("page 5");
+						nextPage4.removeFrom(stage);
+					                        
+                        var t = new Label({text:"Found the castle! Let's check the gate.",color:"gold"});
+						
+						lair.center(stage);
+						
+						character.addTo(stage).pos(-200,stageH/2);
+						character.animate({
+							obj:{x:200},
+							time:500,
+						});
+                        
+                        t.addTo(stage).pos(stageW/4.5,stageH/5);
+						
+						lair.on("click", function(){
+							door.addTo(stage).pos(-250,-225).sca(2,1.5)
+							
+							//remove bubbles to open door							
+							var instruct = new Label({
+								text:"Clear all the bubbles before they cover the door!",
+								size:45,
+								align:"right",
+								color:"gold"
+							});
+							
+							var count = 30;
+							var counter = setInterval(win, 1000);
+                
+							var rect = new Rectangle(500,250,"blue");
+							rect.center(stage);
+                
+							var colours = ["red","blue","purple"];
+							var circles = new Container;
+							var bubbleMaker = setInterval(bubbleMaker,500);
+							
+							//start game
+							rect.animate({
+								obj:{alpha:1,
+									 scaleX:0.05,
+									 rotation:45}
+							});                    	
+							circles.addTo(stage);
+							instruct.addTo(stage);
+							instruct.animate({
+								obj:{wait:1000,x:stageW}
+							});
+							
+							//game
+							rect.drag();
+							function bubbleMaker(){
+								var bubbles = new 	Circle(25,colours[rand(colours.length-1)]);
+								bubbles.x = rand(stageW-bubbles.radius);
+								bubbles.y = rand(stageH-bubbles.radius);
+								bubbles.addTo(circles);
+								stage.update();
+							};
+							
+							rect.on("pressmove", function(){
+								for(var i=0;i<circles.numChildren;i++){
+									bubbles = circles.getChildAt(i);
+									if(bubbles.hitTestRect(rect,2)){
+										bubbles.removeFrom(circles);
+										stage.update();
+									}
+								}
+							});
+							
+							//win game
+							function win(){
+								if(circles.numChildren <= 0){
+									clearInterval(bubbleMaker);
+									instruct.removeFrom(stage);
+									rect.removeFrom(stage);
+									door.removeFrom(stage);
+									t.removeFrom(stage);
+								}
+							}
+							nextPage5.addTo(stage).pos(stageW/1.25,stageH/1.1)
+						});
+						
+						nextPage5.on("click", function(){
+							character.removeFrom(stage);
+							lair.removeFrom(stage);
+							pageSix();
+						});
+					}
+
+					//pageSix();
+					//final battle
+					function pageSix(){
+						zog("page 6");
+						nextPage5.removeFrom(stage);
+						
+						indoors.centerReg(stage).sca(1.5,1.2);
+						hostage.addTo(stage).pos(stageW/1.25,stageH/4.5).siz(200);
+						character.addTo(stage).pos(-250,stageH/1.5).siz(200);
+						
+						character.animate({
+							obj:{x:+175},
+							time:500
+						});
+						
+						var r = new Label({text: "Found them!", color: "gold"});
+						var attack = new Label({text: "Attack", backgroundColor: "red"});
+						var defend = new Label({text: "Defend", backgroundColor: "blue"});
+						
+						r.addTo(stage).pos(stageW/5,stageH/2.1);
+						attack.addTo(stage).pos(250,stageH/1.25);
+						defend.addTo(stage).pos(250,stageH/1.5);
+						
+						//attack and defend
+						
+						attack.on("click", function(){
+							r.removeFrom(stage);
+							attackSpell.centerReg(stage).siz(500);
+							attackSpell.animate({
+								obj:{alpha: 0},
+								time: 1000
+							});
+							attackSpell.animate({
+								wait:1000,
+								obj:{alpha: 1},
+								time: 500
+							});
+							attackSpell.animate({
+								wait:1500,
+								obj:{alpha: 0},
+								time: 500
+							});
+							hostage.removeFrom(stage);
+							wound.addTo(stage).pos(stageW/1.5,stageH/10).siz(250);
+							nextPage6.addTo(stage).pos(stageW/1.25,stageH/1.1)
+						});
+						
+						defend.on("click", function(){
+							r.removeFrom(stage);
+							defendSpell.addTo(stage).pos(125,stageH/3).siz(250);
+							curse.centerReg(stage).siz(400);
+							curse.animate({
+								obj:{alpha: 0.5},
+								time: 1000
+							});
+							curse.animate({
+								wait:1000,
+								obj:{alpha: 1},
+								time: 500
+							});
+							curse.animate({
+								wait:1500,
+								obj:{alpha: 0},
+								time: 500
+							});
+						});
+
+						nextPage6.on("click", function(){
+							character.removeFrom(stage);
+							wound.removeFrom(stage);
+							indoors.removeFrom(stage);
+							attack.removeFrom(stage);
+							defend.removeFrom(stage);
+							defendSpell.removeFrom(stage);
+							pageSeven();
+						});
+					}
+					
+					//ending, link to replay
+					function pageSeven(){
+						zog("end");
+						nextPage6.removeFrom(stage);
+						setting.centerReg(stage);
+						
+						victory.centerReg(stage);
+						replay.addTo(stage).pos(stageW/2.4,stageH/1.5);
+						replay.on("click",function(){
+							victory.removeFrom(stage);
+							replay.removeFrom(stage);
+							pageOne();
+							nextPage.addTo(stage).pos(stageW/1.25,stageH/1.1)
+						})
+					}
+					
+					stage.update(); // this is needed to show any changes
+					
+				}); // end of ready
+			});
+		</script>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	</head>
+	<body>
+		<!-- canvas with id="myCanvas" is made by zim Frame -->
+    </body>
