@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Story Builder - Climax</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <form action="confirm.php" method="post">
+            <h1>Motivation</h1>
+            <div class="options">
+                <label class="radio">
+                    <input type="radio" name="reason" id="hostage"/>
+                    <img src="img/hostage.png" />
+                    <input type="radio" name="reason" id="conquered"/>
+                    <img src="img/conquered.png" />
+                </label>
+            </div>
+            <br/>
+            <h1>Conflict</h1>
+            <div class="options">
+                <label class="radio">
+                    <input type="radio" name="fight" id="battle"/>
+                    <img src="img/battle.png" />
+                    <input type="radio" name="fight" id="puzzle"/>
+                    <img src="img/puzzle.png" />
+                </label>
+            </div>
+            <br/>
+			<a href="confirm.php"><input type="button" id="create" value="Create" /></a>
+        </form>
+    </body>
+</html>
