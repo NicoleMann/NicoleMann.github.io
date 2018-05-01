@@ -17,7 +17,7 @@ $fight = $_POST['fight'];
 $stmtA = $pdo->prepare("SELECT * FROM `Characters` 
 	WHERE `Gender` = '$gender' AND `Type` = '$typeP';");
 $stmtB = $pdo->prepare("SELECT * FROM `Setting` 
-	WHERE `Setting` = '$setting';");
+	WHERE `Name` = '$setting';");
 $stmtC = $pdo->prepare("SELECT * FROM `Villain` 
 	WHERE `Type` = '$typeV' AND `Lair` = '$lair';");
 $stmtD = $pdo->prepare("SELECT * FROM `Conflict` 
@@ -40,24 +40,18 @@ $stmtD->execute();
 		<h1>Confirm Story Pieces</h1>
 		<h2>Character</h2>
 		<? while($row=$stmtA->fetch()){ ?>
-		<p><? echo($row["CharacterID"]);?></p>
-		<!--<img src="<? echo($row[""]);?>" style="max-width: 80px height: auto"/>-->
+        <p><? echo($row["Character.Name"]);
+            echo($row["Character.Type"]);?></p>
 		<? } ?>
 		<h2>Setting</h2>
 		<? while($row=$stmtB->fetch()){	?>
-		<p><? echo($row["SettingID"]);?></p>
-		<!--<img src="<? echo($row[""]);?>" style="max-width: 80px height: auto"/>-->
+		<p><? echo($row["Setting.Name"]);?></p>
 		<? } ?>
 		<h2>Villain</h2>
 		<? while($row=$stmtC->fetch()){ ?>
-		<p><? echo($row["VillainID"]);?></p>
-		<!--<img src="<? echo($row[""]);?>" style="max-width: 80px height: auto"/>-->
+		<p><? echo($row["Villain.Type"]);
+            echo($row["Villain.Lair"])?></p>
 		<? } ?>
-		<h2>Climax</h2>
-		<? while($row=$stmtD->fetch()){ ?>
-		<p><? echo($row["ConflictID"]);?></p>
-		<!--<img src="<? echo($row[""]);?>" style="max-width: 80px height: auto"/>-->
-		<? } ?>
-		<a href="story.html"><input type="button" id="create" value="Write Story"/></a>
+		<a href="story.php"><input type="button" id="create" value="Write Story"/></a>
     </body>
 </html>
