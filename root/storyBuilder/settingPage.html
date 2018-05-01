@@ -2,29 +2,36 @@
 <html>
     <head>
         <meta charset="utf-8"/>
-        <title>Story Builder - Setting</title>
+        <title>Story Builder - Protagonist</title>
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
         <form action="confirm.php" method="post">
-            <h1>Setting</h1>
+            <h1>Type</h1>
             <div class="options">
                 <label class="radio">
-                    <input type="radio" name="setting" id="town"/>
-                    <img src="img/town.png" />
-                    <input type="radio" name="setting" id="mount"/>
-                    <img src="img/mount.png" />
-                    <input type="radio" name="setting" id="forest"/>
-                    <img src="img/forest.png" />
+                    <input type="radio" name="typeP" id="mage"/>
+                    <img src="img/wand.png" alt="Mage"/>
+                    <input type="radio" name="typeP" id="war"/>
+                    <img src="img/sword.png" alt="Warrior"/>
+                    <input type="radio" name="typeP" id="roy"/>
+                    <img src="img/crown.png" alt="Royalty"/>
                 </label>
             </div>
             <br/>
-            <h1>Name</h1>
+            <h1>Gender</h1>
             <div class="options">
-                <input type="text">
+                <label class="radio">
+                    <input type="radio" name="gender" id="mal"/>
+                    <img src="img/male.png" alt="Male"/>
+                    <input type="radio" name="gender" id="fem"/>
+                    <img src="img/female.png" alt="Female"/>
+                    <input type="radio" name="gender" id="neu"/>
+                    <img src="img/neutral.png" alt="Nuetral"/>
+                </label>
             </div>
             <br/>
-			<a href="vilPage.html"><input type="button" id="create" value="Create" /></a>
+		<a href="settingPage.html"><input type="button" id="create" value="Create" /></a>
         </form>
     </body>
 </html>
