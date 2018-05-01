@@ -16,17 +16,17 @@ $fight = $_POST['fight'];
 
 $stmtA = $pdo->prepare("SELECT * FROM `Characters` 
 	WHERE `Gender` = '$gender' AND `Type` = '$typeP';");
-$stmtB = $pdo->prepare("SELECT * FROM `Setting` 
-	WHERE `Setting` = '$setting';");
-$stmtC = $pdo->prepare("SELECT * FROM `Villain` 
-	WHERE `Type` = '$typeV' AND `Lair` = '$lair';");
-$stmtD = $pdo->prepare("SELECT * FROM `Conflict` 
-	WHERE `Reason` = '$reason' AND `Fight` = '$fight';");
+//$stmtB = $pdo->prepare("SELECT * FROM `Setting` 
+//	WHERE `Setting` = '$setting';");
+//$stmtC = $pdo->prepare("SELECT * FROM `Villain` 
+//	WHERE `Type` = '$typeV' AND `Lair` = '$lair';");
+//$stmtD = $pdo->prepare("SELECT * FROM `Conflict` 
+//	WHERE `Reason` = '$reason' AND `Fight` = '$fight';");
 
 $stmtA->execute();
-$stmtB->execute();
-$stmtC->execute();
-$stmtD->execute();
+//$stmtB->execute();
+//$stmtC->execute();
+//$stmtD->execute();
 
 ?>
 <!doctype html>
@@ -37,13 +37,15 @@ $stmtD->execute();
 		<link rel="stylesheet" href="css/style.css" />
 	</head>
 	<body>        
-		<h1>The Adventure of <span <? echo($row["Character.Name"]) ?> ></span></h1>
-        <p>Once upon a time there was a man/woman/person named <span <? echo($row["Character.Name"]) ?> ></span> and <span <? echo($row["Charcter.Gender"]) ?> ></span> lived <span <? echo($row["Setting"]) ?><? echo($row["Setting.Name"]) ?> ></span>.  It was here that <span <? echo($row["Character.Name"]) ?> ></span> practiced the magical arts/trained long and hard to master the sword/ruled justly over the country.  Things were peaceful, for a time.</p>
-        <p>Then one day, along came <span <? echo($row["Villain.Name"]) ?> ></span>, bringing chaos to <span <? echo($row["Setting.Name"]) ?> ></span>.  <span <? echo($row["Villain.Name"]) ?> ></span> was evil and rude, and had a penchant for taking things that belonged to others.</p>
-        <p><span <? echo($row["Conflict.Reason"]) ?> ></span></p>
-        <p><span <? echo($row["Character.Name"]) ?> ></span> learned of <span <? echo($row["Villain.Name"]) ?> ></span>’s presence in the country and set off on a journey to to defeat <span <? echo($row["Villain.Name"]) ?> ></span>.  Navigating to <span <? echo($row["Villain.Name"]) ?> ></span>’s lair was fairly simple and before long <span <? echo($row["Character.Name"]) ?> ></span> arrived at the <span <? echo($row["Villain.Lair"]) ?> ></span> that <span <? echo($row["Villain.Name"]) ?> ></span> called home.  Once there, <span <? echo($row["Character.Name"]) ?> ></span> <span <? echo($row["Conflict.Fight"]) ?> ></span>  <span <? echo($row["Character.Name"]) ?> ></span> then <span <? echo($row["Conflict.Ending"]) ?> ></span>
-And they all lived happily ever after!
-</p>
-			<a href="protagPage.html"><input type="button" value="Edit"/></a>
-
+		<h1>The Adventure of <span><? echo($row["Character.Name"]) ?></span></h1>
+        
+        <p>Once upon a time there was a person named <span><? echo($row["Character.Name"]) ?></span> and <span><? echo($row["Charcter.Gender"]) ?></span> lived in a <span><? echo($row["Setting"]) ?></span>.  Things were peaceful, for a time.</p>
+        
+        <p>Then one day, along came a <span><? echo($row["Villain.Type"]) ?></span>, bringing chaos to the <span><? echo($row["Setting.Name"]) ?></span>.  The <span><? echo($row["Villain.Type"]) ?></span> was evil and rude, and had a penchant for taking things that belonged to others.</p>
+        
+        <p><span><? echo($row["Conflict.Reason"]) ?></span></p>
+        
+        <p>The <span><? echo($row["Character.Name"]) ?></span> learned of the <span><? echo($row["Villain.Type"]) ?></span>’s presence in the country and set off on a journey to to defeat the <span><? echo($row["Villain.Type"]) ?></span>.  Navigating to the <span><? echo($row["Villain.Type"]) ?></span>’s lair was fairly simple and before long the <span><? echo($row["Character.Name"]) ?></span> arrived at the <span><? echo($row["Villain.Lair"]) ?></span> that the <span><? echo($row["Villain.Type"]) ?></span> called home.  Once there, the <span><? echo($row["Character.Name"]) ?></span> <span><? echo($row["Conflict.Fight"]) ?></span>.  <span><? echo($row["Character.Name"]) ?></span> then <span><? echo($row["Conflict.Ending"]) ?></span>.  And they all lived happily ever after!</p>
+        
+        <a href="protagPage.html"><input type="button" value="Edit"/></a>
     </body>
