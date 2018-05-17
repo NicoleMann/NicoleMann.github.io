@@ -27,21 +27,8 @@ $stmtA->execute();
   <body>
     <h1>Nicole Mann</h1>
     <h2>Skills</h2>
-    <? while($row=$stmtA->fetch()){ ?>
-    <p><? echo($row["Character.Name"]);echo($row["Character.Type"]);?></p>
-    <? } ?>
     <h2>Experience</h2>
-    <? while($row=$stmtB->fetch()){	?>
-    <p><? echo($row["Setting.Name"]);?></p>
-    <? } ?>
     <h2>Education</h2>
-    <? while($row=$stmtC->fetch()){ ?>
-    <p><? echo($row["Villain.Type"]);echo($row["Villain.Lair"])?></p>
-    <? } ?>
     <h2>Contact Information</h2>
-    <? while($row=$stmtC->fetch()){ ?>
-    <p><? echo($row["Villain.Type"]);echo($row["Villain.Lair"])?></p>
-    <? } ?>
-    <a href="story.html"><input type="button" id="create" value="Write Story"/></a>
   </body>
 </html>
