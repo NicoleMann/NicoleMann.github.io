@@ -1,15 +1,6 @@
 <!doctype html>
-<html>    
-  <head>
-    <meta charset="utf-8"/>
-    <title>Nicole Mann - Resume</title>
-    
-  </head>
-  <body>
-<?php 
-session_start();
-
-$dsn = "mysql:host=localhost;dbname=mannnico_storyBuilder";
+<?php session_start();
+$dsn = "mysql:host=localhost;dbname=mannnico_student";
 $username = "mannnico";
 $password = "2%9zgrFhR%J";
 $pdo = new PDO($dsn, $username, $password);
@@ -23,25 +14,36 @@ $reason = $_POST['reason'];
 $fight = $_POST['fight'];
 
 $stmtA = $pdo->prepare("SELECT * FROM `Skills`;");
-$stmtB = $pdo->prepare("SELECT * FROM `Setting`;");
-$stmtC = $pdo->prepare("SELECT * FROM `Villain`;");
-$stmtD = $pdo->prepare("SELECT * FROM `Conflict`;");
+$stmtB = $pdo->prepare("SELECT * FROM `Experience`;");
+$stmtC = $pdo->prepare("SELECT * FROM `Education`;");
+$stmtD = $pdo->prepare("SELECT * FROM `Contact`;");
+
 $stmtA->execute();
 $stmtB->execute();
 $stmtC->execute();
 $stmtD->execute();
-
 ?>
-    <h1>Confirm Story Pieces</h1>
-    <h2>Character</h2>
+<html>    
+  <head>
+    <meta charset="utf-8"/>
+    <title>Nicole Mann - Resume</title>
+    
+  </head>
+  <body>
+    <h1>Nicole Mann</h1>
+    <h2>Skills</h2>
     <? while($row=$stmtA->fetch()){ ?>
     <p><? echo($row["Character.Name"]);echo($row["Character.Type"]);?></p>
     <? } ?>
-    <h2>Setting</h2>
+    <h2>Experience</h2>
     <? while($row=$stmtB->fetch()){	?>
     <p><? echo($row["Setting.Name"]);?></p>
     <? } ?>
-    <h2>Villain</h2>
+    <h2>Education</h2>
+    <? while($row=$stmtC->fetch()){ ?>
+    <p><? echo($row["Villain.Type"]);echo($row["Villain.Lair"])?></p>
+    <? } ?>
+    <h2>Contact Information</h2>
     <? while($row=$stmtC->fetch()){ ?>
     <p><? echo($row["Villain.Type"]);echo($row["Villain.Lair"])?></p>
     <? } ?>
