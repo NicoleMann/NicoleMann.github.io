@@ -58,17 +58,12 @@ $stmt->execute();
     ?>
     </table>
     <h2>Contact Information</h2>
-    <table>
-    <?
-    while($row=$stmt->fetch()){
-    ?>    
+    <table>   
       <tr>
-        <td><?echo($row["Contact.Name"]);?></td>
-        <td><?echo($row["Contact.Description"]);?></td>
+        <td>Mobile: <a href="call:6478341606">(647) 834-1606</a></td>
+        <td>Home: <a href="call:9056703510">(905) 670-3510</a></td>
+        <td>Email: <a href="mailto:mannnico@sheridancollege.ca">mannnico@sheridancollege.ca</a></td>
       </tr>
-    <?    
-    }
-    ?>
     </table>
   </body>
 </html>
