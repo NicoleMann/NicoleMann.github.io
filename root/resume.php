@@ -69,3 +69,5 @@ $stmt->execute();
         <td>Email: <a href="mailto:mannnico@sheridancollege.ca">mannnico@sheridancollege.ca</a></td>
       </tr>
     </table>
+    </body>
+    </html?
