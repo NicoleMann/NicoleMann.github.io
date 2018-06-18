@@ -2,9 +2,11 @@
 
 $(document).ready(function(){ //OKAY WE'RE LEAVING IT JQUERY
 
-  var protag;
-  var male = Document.getElementById("male");
+  var protagGen;
+  var male = $("#male");
   if(male.clicked){
-  protag = male; //HOW DO I MAKE YOU REMEMBER THAT YOU'RE MALE NOW??
+  protagGen = "<p>He </p>"; //HOW DO I MAKE YOU REMEMBER THAT YOU'RE MALE NOW??
   }
+  
+  
 });
