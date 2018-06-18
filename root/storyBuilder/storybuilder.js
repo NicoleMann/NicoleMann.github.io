@@ -2,10 +2,11 @@
 
 $(document).ready(function(){ //OKAY WE'RE LEAVING IT JQUERY
 
-  var protagGen;
-  var male = $("#male");
-  if(male.clicked){
-  protagGen = "<p>He </p>"; //HOW DO I MAKE YOU REMEMBER THAT YOU'RE MALE NOW??
+  //elimating gender & name, just going with type now
+  var protag;
+  var war = $("#war");
+  if(war.clicked){
+  protag = "<p>The Warrior </p>"; 
   }
   
   
